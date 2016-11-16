@@ -1,8 +1,12 @@
-#ifndef TASK1_NODE_H
-#define TASK1_NODE_H
+#pragma once
+#ifdef LABDLL_EXPORTS
+#define LABDLL_API __declspec(dllexport)
+#else
+#define LABDLL_API __declspec(dllimport)
+#endif
 
 
-class Node {
+class __declspec(dllexport) Node {
 public:
     int* getKey();
 
@@ -42,6 +46,3 @@ private:
     Node* leftNode;
     Node* rightNode;
 };
-
-
-#endif //TASK1_NODE_H

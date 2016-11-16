@@ -1,10 +1,13 @@
-#ifndef TASK1_MAP_H
-#define TASK1_MAP_H
-
+#pragma once
+#ifdef LABDLL_EXPORTS
+#define LABDLL_API __declspec(dllexport)
+#else
+#define LABDLL_API __declspec(dllimport)
+#endif
 
 #include "tree/Node.h"
 
-class Map {
+class __declspec(dllexport) Map {
 
 public:
     int* get(int key);
@@ -27,6 +30,3 @@ private:
     Node* rootNode;
     int* size;
 };
-
-
-#endif //TASK1_MAP_H

@@ -1,9 +1,9 @@
-#include <iostream>
+
 #include "map/Map.h"
 
 
 int main() {
-    Map* map = new Map();
+     Map* map = new Map();
     map->put(0,100);
     map->put(-10,-150);
     map->put(10,150);
@@ -14,11 +14,7 @@ int main() {
     map->put(-122,-875);
     map->put(54,9212);
 
-    //Serialization
-    Map::output("test.txt",map);
-    Map* importedMap = Map::input("test.txt");
     delete map;
 
-    delete importedMap;
     return 0;
 }
