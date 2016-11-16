@@ -1,7 +1,5 @@
 Software/
 desktop.ini
 node_modules/
-/.idea
 /target
-*.iml
 .~*
