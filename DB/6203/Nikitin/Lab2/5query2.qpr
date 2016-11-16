@@ -1,0 +1,4 @@
+SELECT *;
+ FROM base1!stud;
+ WHERE  Stud.sum_b IS NULL;
+   OR  Stud.dr IS NULL

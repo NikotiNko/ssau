@@ -1,0 +1,4 @@
+SELECT *;
+ FROM base1!stud;
+ WHERE  NOT (Stud.plata );
+   AND  Stud.sum_b IS NULL

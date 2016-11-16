@@ -1,0 +1,42 @@
+$fontColor: #fff; //#000
+$fontColor2: #2b2b2b; //#000
+$backgroundColor: #2b2b2b;
+$backgroundColor2: #fff;
+
+footer{
+  .element{
+    color: $fontColor;
+    @media screen and (max-width: $small){
+      margin-top: 20px;
+    }
+  }
+  .mail{
+    text-align: left;
+    @media screen and (max-width: $small){
+      text-align: center;
+    }
+  }
+  .copy{
+    text-align: center;
+    @media screen and (max-width: $small){
+      text-align: center;
+    }
+    img{
+      width: 170px;
+    }
+  }
+  .phone{
+    text-align: right;
+    @media screen and (max-width: $small){
+      text-align: center;
+    }
+  }
+
+  padding: 38px 3%;
+  background-color: $backgroundColor;
+  @media screen and (min-width: $small){
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

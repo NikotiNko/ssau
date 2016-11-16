@@ -1,0 +1,8 @@
+sp = INPUTBOX("Специальность")
+SELECT Stud.num, Stud.fio, Stud.n_gr;
+ FROM ;
+     base1!group ;
+    INNER JOIN base1!stud ;
+   ON  Group.n_gr = Stud.n_gr;
+ WHERE  Group.spec = ( sp );
+ ORDER BY Stud.n_gr, Stud.fio

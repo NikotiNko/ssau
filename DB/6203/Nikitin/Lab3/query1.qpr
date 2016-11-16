@@ -1,0 +1,4 @@
+SELECT *;
+ FROM base1!stud;
+ WHERE  Stud.god = 2014;
+   AND  NOT (Stud.plata )

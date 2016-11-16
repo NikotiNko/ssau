@@ -1,0 +1,6 @@
+SELECT Stud.fio, Group.spec;
+ FROM ;
+     base1!group ;
+    INNER JOIN base1!stud ;
+   ON  Group.n_gr = Stud.n_gr;
+ ORDER BY Group.spec, Stud.fio

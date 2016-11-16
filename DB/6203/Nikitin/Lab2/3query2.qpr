@@ -1,0 +1,4 @@
+SELECT *;
+ FROM ;
+     base1!stud;
+ WHERE  LIKE("Í*",LTRIM(Stud.fio)) 

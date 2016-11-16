@@ -1,0 +1,6 @@
+SELECT Group.spec, COUNT(Group.spec);
+ FROM ;
+     base1!stud ;
+    INNER JOIN base1!group ;
+   ON  Stud.n_gr = Group.n_gr;
+ GROUP BY Group.spec

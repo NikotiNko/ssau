@@ -1,0 +1,9 @@
+SELECT Group.spec, COUNT(d);
+ FROM ;
+     base1!group ;
+    INNER JOIN base1!stud ;
+   ON  Group.n_gr = Stud.n_gr;
+ WHERE  Group.spec = "ÈÂÒ";
+ GROUP BY Group.n_gr;
+ ORDER BY Group.n_gr
+

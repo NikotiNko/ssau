@@ -1,0 +1,7 @@
+ye = VAL(INPUTBOX("Год"))
+b = INPUTBOX("Буква")
+SELECT *;
+ FROM ;
+     base1!stud;
+ WHERE  YEAR(Stud.dr) = ( ye );
+   AND  LTRIM(Stud.fio) = ( b )

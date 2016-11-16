@@ -1,0 +1,6 @@
+ye = VAL(INPUTBOX("Μερÿφ"))
+SELECT *;
+ FROM ;
+     base1!stud;
+ WHERE  MONTH(Stud.dr) = ( ye );
+ ORDER BY Stud.n_gr

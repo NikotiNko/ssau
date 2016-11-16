@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="625.0" maxWidth="532.0" minHeight="577.0" minWidth="500.0" prefHeight="577.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="email.EmailClient">
+    <children>
+        <Label fx:id="subjectLabel" layoutX="15.0" layoutY="86.0" text="Тема:" />
+        <TextField fx:id="subject" layoutX="63.0" layoutY="82.0" prefHeight="25.0" prefWidth="424.0" />
+        <Button fx:id="send" layoutX="241.0" layoutY="443.0" onAction="#process" text="Отправка" />
+        <ProgressIndicator fx:id="indicator" layoutX="199.0" layoutY="256.0" prefHeight="89.0" prefWidth="103.0" visible="false" />
+        <Label fx:id="info" layoutX="63.0" layoutY="476.0" prefHeight="66.0" prefWidth="424.0" />
+        <Label fx:id="recipientLabel" layoutX="14.0" layoutY="46.0" text="Кому:" />
+        <TextField fx:id="recipient" layoutX="63.0" layoutY="42.0" prefHeight="25.0" prefWidth="424.0" />
+        <TextArea fx:id="body" layoutX="63.0" layoutY="130.0" prefHeight="305.0" prefWidth="424.0" />
+        <Button fx:id="back" layoutX="14.0" layoutY="542.0" mnemonicParsing="false" onAction="#back" text="Назад" />
+      <Button fx:id="attach" layoutX="404.0" layoutY="443.0" mnemonicParsing="false" onAction="#attach" text="Прикрепить файл" />
+      <Label fx:id="filesInfo" layoutX="11.0" layoutY="443.0" prefHeight="17.0" prefWidth="201.0" />
+    </children>
+</AnchorPane>

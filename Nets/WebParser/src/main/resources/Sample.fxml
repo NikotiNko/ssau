@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="625.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="625.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webparser.WebParser">
+    <children>
+        <Label layoutX="51.0" layoutY="94.0" text="Введите начальную стараницу" />
+        <TextField fx:id="input" layoutX="51.0" layoutY="121.0" prefHeight="30" prefWidth="400" />
+        <Button fx:id="button" layoutX="212.0" layoutY="159.0" onAction="#process" text="Обработка" />
+        <ProgressIndicator fx:id="indicator" layoutX="199.0" layoutY="256.0" prefHeight="89.0" prefWidth="103.0" />
+      <TreeView fx:id="output" layoutX="51.0" layoutY="200.0" prefHeight="337.0" prefWidth="400.0" />
+      <Label fx:id="info" layoutX="51.0" layoutY="549.0" prefHeight="66.0" prefWidth="407.0" />
+    </children>
+</AnchorPane>

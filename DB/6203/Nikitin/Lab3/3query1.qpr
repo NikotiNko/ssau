@@ -1,0 +1,5 @@
+SELECT *;
+ FROM ;
+     base1!stud;
+ WHERE  YEAR(Stud.dr) BETWEEN 1980 AND 1995;
+ ORDER BY Stud.dr

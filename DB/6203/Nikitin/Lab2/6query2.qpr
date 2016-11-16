@@ -1,0 +1,4 @@
+SELECT *;
+ FROM ;
+     Stud;
+ WHERE  Stud.num NOT IN (SELECT passport.num FROM passport)

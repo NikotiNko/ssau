@@ -1,0 +1,6 @@
+SELECT Group.n_gr, SUM(Stud.sum_b)/COUNT(Stud.sum_b);
+ FROM ;
+     base1!group ;
+    INNER JOIN base1!stud ;
+   ON  Group.n_gr = Stud.n_gr;
+ GROUP BY Group.n_gr

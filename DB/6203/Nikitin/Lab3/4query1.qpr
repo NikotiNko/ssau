@@ -1,0 +1,4 @@
+SELECT *;
+ FROM base1!stud;
+ WHERE  MONTH(Stud.dr) = 2;
+ ORDER BY Stud.n_gr

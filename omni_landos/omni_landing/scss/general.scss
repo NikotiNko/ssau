@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,cyrillic-ext);
+
+$xsmall: 480px;
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+html, body {
+  min-width: $xsmall;
+  @media screen and (min-width: $small) {
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+}
+
+.global-wrapper {
+  min-width: $xsmall;
+  @media screen and (min-width: $small) {
+    min-height: 100%;
+    position: relative;
+  }
+}
+
+.content-wrapper {
+  @media screen and (min-width: $small){
+    padding-bottom: 160px;
+  }
+
+}
+
+//.container {
+//  @media screen and (min-width: $medium) {
+//    max-width: 960px;
+//  }
+//}

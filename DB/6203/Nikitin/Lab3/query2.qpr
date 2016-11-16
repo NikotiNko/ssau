@@ -1,0 +1,5 @@
+SELECT *;
+ FROM ;
+     base1!stud;
+ WHERE  Stud.n_gr = ( 3201 );
+   AND  MONTH(Stud.dr) = ( 2 )

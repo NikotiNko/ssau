@@ -1,0 +1,4 @@
+SELECT *;
+ FROM base1!stud;
+ WHERE  YEAR(Stud.dr) = 1996;
+   AND  Stud.fio LIKE 'Í%'
