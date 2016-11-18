@@ -3,7 +3,7 @@
 
 
 int main() {
-     Map* map = new Map();
+    Map* map = new Map();
     map->put(0,100);
     map->put(-10,-150);
     map->put(10,150);
