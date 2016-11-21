@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RandomGenerator.iml" filepath="$PROJECT_DIR$/RandomGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Monitor.iml" filepath="$PROJECT_DIR$/Monitor.iml" />
     </modules>
   </component>
 </project>

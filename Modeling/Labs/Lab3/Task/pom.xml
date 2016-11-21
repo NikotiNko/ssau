@@ -5,22 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ssau.nets</groupId>
-    <artifactId>ftp-parser</artifactId>
+    <artifactId>monitor</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>3.15</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.15</version>
-        </dependency>
-    </dependencies>
     
     <build>
         <plugins>
