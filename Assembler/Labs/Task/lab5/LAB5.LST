@@ -1,0 +1,127 @@
+Turbo Assembler	 Version 4.1	    10/19/16 23:36:44	    Page 1
+lab5.asm
+
+
+
+      1	    0000			 .model	small
+      2					 .386
+      3	    0000			 .stack	100h
+      4
+      5	    0000			 .data
+      6	    0000  ????					 int_ip_address	dw ?
+      7	    0002  ????					 int_cs_segment	dw ?
+      8
+      9	    0004  0010				 len dw	0010h
+     10	    0006  0B*(??)			 str1 db 11 dup(?)
+     11	    0011			 .code
+     12	    0000			 START:
+     13	    0000  B8 0000s			 mov ax, @data
+     14	    0003  8E D8				 mov ds, ax
+     15
+     16	    0005  B8 0000			 mov ax, 0
+     17	    0008  8E C0				 mov es, ax
+     18
+     19	    000A  FA							 cli
+     20	    000B  26: A1 0058							 mov ax, es:[16h * 4]
+     21	    000F  A3 0000r							 mov int_ip_address, ax
+     22	    0012  26: A1 005A							 mov ax, es:[16h * 4 + 2]
+     23	    0016  A3 0002r							 mov int_cs_segment, ax
+     24
+     25	    0019  B8 0049r							 mov ax, offset	Int_19h_new
+     26	    001C  8C CA								 mov dx, cs
+     27	    001E  26: A3 0058							 mov es:[16h * 4], ax
+     28	    0022  26: 89 16 005A						 mov es:[16h * 4 + 2], dx
+     29	    0027  FB							 sti
+     30
+     31	    0028  BA 0004r							 mov dx, offset	len
+     32	    002B  B4 0A							 mov ah, 0Ah
+     33	    002D  CD 21							 int 21h
+     34
+     35	    002F  FA							 cli
+     36	    0030  A1 0000r							 mov ax, int_ip_address
+     37	    0033  26: A3 0058							 mov es:[16h * 4], ax
+     38	    0037  A1 0002r							 mov ax, int_cs_segment
+     39	    003A  26: A3 005A							 mov es:[16h * 4 + 2], ax
+     40	    003E  FB							 sti
+     41
+     42	    003F  B8 0700			 mov ax, 0700h
+     43	    0042  CD 21				 int 21h
+     44
+     45	    0044  B4 4C				 mov ah, 4Ch
+     46	    0046  CD 21				 int 21h
+     47
+     48	    0048  C3				 ret
+     49
+     50
+     51					 ;include Console.asm
+     52
+     53
+     54	    0049			 Int_19h_new proc
+     55	    0049  80 FC	01				 cmp ah, 1
+     56	    004C  77 06	90 90				 ja @ok
+     57	    0050  FF 2E	0000r					 jmp dword ptr int_ip_address
+Turbo Assembler	 Version 4.1	    10/19/16 23:36:44	    Page 2
+lab5.asm
+
+
+
+     58	    0054					 @ok:
+     59
+     60	    0054  9C					 pushf
+     61	    0055  FF 1E	0000r				 call dword ptr	int_ip_address
+     62
+     63	    0059  3C 7A					 cmp al, 'z'
+     64	    005B  75 07	90 90				 jne @if_1_else
+     65	    005F  B0 61						 mov al, 'a'
+     66	    0061  EB 09	90					 jmp @if_1_break
+     67	    0064				 @if_1_else:
+     68	    0064  3C 61					 cmp al, 'a'
+     69	    0066  75 04	90 90				 jne @if_1_break
+     70	    006A  B0 7A						 mov al, 'z'
+     71	    006C				 @if_1_break:
+     72
+     73	    006C  CF				 iret
+     74	    006D			 Int_19h_new endp
+     75
+     76					 END START
+Turbo Assembler	 Version 4.1	    10/19/16 23:36:44	    Page 3
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "10/19/16"
+??FILENAME			  Text	 "lab5	  "
+??TIME				  Text	 "23:36:43"
+??VERSION			  Number 040A
+@32BIT				  Text	 0
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0F0FH
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 LAB5
+@IF_1_BREAK			  Near	 _TEXT:006C
+@IF_1_ELSE			  Near	 _TEXT:0064
+@INTERFACE			  Text	 000H
+@MODEL				  Text	 2
+@OK				  Near	 _TEXT:0054
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+INT_19H_NEW			  Near	 _TEXT:0049
+INT_CS_SEGMENT			  Word	 DGROUP:0002
+INT_IP_ADDRESS			  Word	 DGROUP:0000
+LEN				  Word	 DGROUP:0004
+START				  Near	 _TEXT:0000
+STR1				  Byte	 DGROUP:0006
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  STACK				  16  0100 Para	  Stack	  STACK
+  _DATA				  16  0011 Word	  Public  DATA
+_TEXT				  16  006D Word	  Public  CODE
+
