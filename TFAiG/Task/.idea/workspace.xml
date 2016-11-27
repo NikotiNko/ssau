@@ -2,34 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3bca867-fd31-40a0-9c8b-954c718aeaf8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/controller/MonitorController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/controller/component/Device.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/controller/component/Generator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/controller/component/Queue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/controller/component/Timer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/controller/entity/Transact.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/service/generator/RandomGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/service/generator/impl/RandomAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/view/MonitorView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Analyzer.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__org_apache_poi_poi_3_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/generator/GeneratorView.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/modules.xml" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/pom.xml" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/resources/main.fxml" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/resources/main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/target/classes/main.fxml" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/target/classes/main.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/RandomGenerator.iml" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/Monitor.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/generator/service/RandomGenerator.java" afterPath="$PROJECT_DIR$/../../Modeling/Labs/Lab3/Task/src/main/java/monitor/service/generator/impl/Gaussian.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/entity/DataItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/entity/Result.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/entity/State.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/simple2.TXT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DB/~$Д_лаб1.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DB/~$Д_лаб2.docx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCX" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.dbc" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.dbc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRX" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRX" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.FRT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.FRT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.frx" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.frx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/stud.CDX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/stud.CDX" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3_access/Database1.accdb" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3_access/Database1.accdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../OS/Labs/Lab4-8/Task6/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../OS/Labs/Lab4-8/Task6/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java" afterPath="$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main.fxml" afterPath="$PROJECT_DIR$/target/classes/main.fxml" />
     </list>
     <ignored path="WebParser.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +38,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CompilerWorkspaceConfiguration">
     <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
   </component>
@@ -59,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AnalyseView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AnalyseView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            <state relative-caret-position="15">
+              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +65,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analyzer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Analyzer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="577">
+              <caret line="500" column="20" selection-start-line="500" selection-start-column="20" selection-end-line="500" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/entity/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/main.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -146,9 +165,13 @@
         <option value="$PROJECT_DIR$/src/main/java/monitor/controller/MonitorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/monitor/controller/AnalyseController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/monitor/service/entity/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/monitor/service/entity/DataItem.java" />
         <option value="$PROJECT_DIR$/src/main/resources/main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/monitor/service/Matcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/monitor/service/entity/State.java" />
+        <option value="$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java" />
       </list>
     </option>
   </component>
@@ -201,6 +224,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,9 +329,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
@@ -351,8 +408,13 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -371,8 +433,13 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -577,7 +644,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Monitor" />
+      <module name="Analyzer" />
       <envs />
       <method />
     </configuration>
@@ -648,35 +715,35 @@
     <option name="totallyTimeSpent" value="15282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65457416" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33060557" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33060557" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -700,7 +767,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="35" />
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -709,17 +776,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/beans/value/ObservableValue.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/beans/binding/ListExpression.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/beans/property/ReadOnlyListProperty.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/beans/property/ListProperty.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/beans/property/ListPropertyBase.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/beans/property/SimpleListProperty.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/Map.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ftpparser/service/FTPService.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/lang/Double.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/lang/Math.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/login.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/fxml/Initializable.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/application/Application.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/email/EmailLogin.java" />
@@ -735,118 +791,83 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_74/javafx-src.zip!/javafx/scene/chart/Axis.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_74/javafx-src.zip!/javafx/scene/chart/ValueAxis.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_74/javafx-src.zip!/javafx/scene/chart/NumberAxis.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.15/poi-3.15.jar!/org/apache/poi/hssf/usermodel/HSSFWorkbook.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="541" column="21" selection-start-line="541" selection-start-column="21" selection-end-line="541" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.15/poi-3.15.jar!/org/apache/poi/hssf/usermodel/HSSFWorkbook.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/email/service/ExcelService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/generator/service/RandomGenerator.java" />
     <entry file="file://$PROJECT_DIR$/../../Lab2/Task/RandomGenerator.iml" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/beans/value/WritableObjectValue.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/beans/value/WritableObjectValue.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/scene/control/ChoiceBox.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/util/Queue.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Integer.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/String.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/generator/impl/Gaussian.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/generator/impl/RandomAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/generator/RandomGenerator.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Enum.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/entity/Block.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Queue.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Device.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/entity/Transact.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Timer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Generator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/AnalyseController.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/scene/control/ChoiceBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="286" column="19" selection-start-line="286" selection-start-column="19" selection-end-line="286" selection-end-column="19" />
+        <state relative-caret-position="102">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/util/Queue.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/scene/control/cell/MapValueFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-794">
-          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
+        <state relative-caret-position="-463">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Integer.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/util/Callback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="396" column="25" selection-start-line="396" selection-start-column="25" selection-end-line="396" selection-end-column="25" />
+        <state relative-caret-position="260">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/String.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/scene/control/cell/PropertyValueFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="3085" column="28" selection-start-line="3085" selection-start-column="28" selection-end-line="3085" selection-end-column="28" />
+        <state relative-caret-position="398">
+          <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
           <folding>
-            <element signature="e#121368#121369#0" expanded="true" />
-            <element signature="e#121410#121411#0" expanded="true" />
+            <element signature="e#4183#4184#0" expanded="false" />
+            <element signature="e#4223#4224#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/generator/impl/Gaussian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/generator/impl/RandomAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/generator/RandomGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Enum.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="229" column="40" selection-start-line="229" selection-start-column="40" selection-end-line="229" selection-end-column="40" />
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/entity/Block.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Queue.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/entity/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        <state relative-caret-position="398">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding>
+            <element signature="e#774#775#0" expanded="false" />
+            <element signature="e#806#807#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/entity/Transact.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/component/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <caret line="347" column="35" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -858,27 +879,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/controller/AnalyseController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/entity/DataItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="117">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -887,16 +896,58 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="85" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
+        <state relative-caret-position="255">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        <state relative-caret-position="15">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="613" column="69" selection-start-line="613" selection-start-column="48" selection-end-line="613" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/entity/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="536" column="75" selection-start-line="536" selection-start-column="54" selection-end-line="536" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="500" column="20" selection-start-line="500" selection-start-column="20" selection-end-line="500" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
