@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="214.0" minWidth="552.0" prefHeight="214.0" prefWidth="552.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitor.view.AnalyseView">
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="214.0" minWidth="552.0" prefHeight="363.0" prefWidth="552.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitor.view.AnalyseView">
    <children>
       <Button layoutX="471.0" layoutY="33.0" mnemonicParsing="false" onAction="#analyze" prefHeight="25.0" prefWidth="58.0" text="Тест" />
       <TextField fx:id="input" layoutX="31.0" layoutY="33.0" prefHeight="25.0" prefWidth="424.0" />
-      <TextArea fx:id="output" disable="true" layoutX="31.0" layoutY="73.0" prefHeight="106.0" prefWidth="424.0" />
+      <Label fx:id="output" layoutX="31.0" layoutY="73.0" prefHeight="53.0" prefWidth="424.0" />
+      <TableView fx:id="identificatorsTable" layoutX="43.0" layoutY="149.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="id1" prefWidth="60.0" text="Номер" />
+          <TableColumn fx:id="identificators" prefWidth="150.0" text="Идентификатор" />
+        </columns>
+      </TableView>
+      <TableView fx:id="constantsTable" layoutX="300.0" layoutY="149.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="id2" prefWidth="60.0" text="Номер" />
+          <TableColumn fx:id="constants" prefWidth="150.0" text="Константа" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
