@@ -22,39 +22,45 @@ public class Queue {
         this.queueLen = queueLen;
         this.queueMaxTime = queueMaxTime;
         this.device = device;
+        System.out.println("Queue CREATED");
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return queue.isEmpty();
     }
 
     public void tick() {
+        System.out.println("Queue TICK, queue size:" + queue.size());
         Iterator<Transact> iterator = queue.iterator();
         while (iterator.hasNext()) {
             Transact t = iterator.next();
             Integer time = t.getParams().get("queueTime");
             if (time > queueMaxTime) {
                 iterator.remove();
-                // TODO: 21.11.2016
-            }else {
+                // TODO: 21.11.2016 STATISTIC
+                System.out.println("Transact" + t.getId() + " DELETED FROM QUEUE, out of time!");
+            } else {
                 time++;
                 t.getParams().put("queueTime", time);
             }
         }
         if (!device.isBusy() && queue.size() != 0) {
-            device.advance(queue.peek());
+            Transact peeked = queue.peek();
+            System.out.println("Transact" + peeked.getId() + " GO TO DEVICE");
+            device.advance(peeked);
         }
     }
 
     public void add(Transact transact) {
-        if (queue.size()<queueLen) {
-            transact.incBlockId();
+        System.out.println("Transact" + transact.getId() + " OFFER TO QUEUE");
+        if (queue.size() < queueLen) {
             transact.getParams().put("queueTime", 0);
             queue.offer(transact);
-
-        }else {
-            transact.setBlockId(3);
-            // TODO: 21.11.2016
+            System.out.println("Transact" + transact.getId() + " ADDED TO QUEUE");
+        } else {
+            transact.setBlock("Deleted");
+            // TODO: 21.11.2016 STATISTIC
+            System.out.println("Transact DELETED FROM QUEUE, queue overload!");
         }
     }
 }

@@ -12,7 +12,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="625.0" maxWidth="532.0" minHeight="96.0" minWidth="309.0" prefHeight="182.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="generator.GeneratorView">
+<AnchorPane maxHeight="625.0" maxWidth="532.0" minHeight="96.0" minWidth="309.0" prefHeight="182.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitor.view.MonitorView">
     <children>
         <ProgressIndicator fx:id="indicator" layoutX="199.0" layoutY="256.0" prefHeight="89.0" prefWidth="103.0" visible="false" />
         <Label fx:id="info" layoutX="63.0" layoutY="476.0" prefHeight="66.0" prefWidth="424.0" />

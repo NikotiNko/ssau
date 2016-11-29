@@ -16,27 +16,38 @@ public class Generator {
     private int lastTime;
     private Queue queue;
     private Timer timer;
+    private Transact currentTransact;
 
     public Generator(MonitorView monitorView, RandomGenerator generateRandomGenerator, int count, Queue queue, Timer timer) {
         this.monitorView = monitorView;
         this.randomGenerator = generateRandomGenerator;
         this.count = count;
         this.currentCount = 0;
+        currentTransact = new Transact(timer);
         this.lastTime = randomGenerator.generate();
         this.queue = queue;
         this.timer = timer;
+        System.out.println("Generator CREATED");
     }
 
     public boolean hasNext() {
-        return currentCount < count;
+        return currentCount <= count;
     }
 
     public void tick() {
-        if (lastTime <= 0) {
-            Transact transact = new Transact(timer);
-            queue.add(transact);
-            lastTime = randomGenerator.generate();
-        }
         lastTime--;
+        System.out.println("Generator TICK, last time:" + lastTime);
+        if (lastTime <= 0) {
+            count++;
+            currentTransact.setBlock("Queue");
+            queue.add(currentTransact);
+            if (currentCount <= count) {
+                currentTransact = new Transact(timer);
+                lastTime = randomGenerator.generate();
+                System.out.println("Generator GENERATE NEW TRANSACT:" + currentTransact.getId());
+            }else {
+                System.out.println("Generator CAN NOT GENERATE NEW TRANSACT");
+            }
+        }
     }
 }

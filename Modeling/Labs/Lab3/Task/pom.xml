@@ -7,7 +7,7 @@
     <groupId>com.ssau.nets</groupId>
     <artifactId>monitor</artifactId>
     <version>1.0-SNAPSHOT</version>
-    
+
     <build>
         <plugins>
             <plugin>

@@ -23,10 +23,15 @@ import monitor.service.generator.impl.RandomAdapter;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.StringJoiner;
 
 
 public class MonitorView extends Application implements Initializable {
 
+    public TableColumn<Transact, Integer> idColumn;
+    public TableColumn<Transact, Integer> birthDateColumn;
+    public TableColumn<Transact, Integer> ageColumn;
+    public TableColumn<Transact, String> blockColumn;
     private MonitorController monitorController;
 
     @FXML
@@ -130,18 +135,13 @@ public class MonitorView extends Application implements Initializable {
 
         table.setEditable(true);
 
-        TableColumn idCol = new TableColumn("Id");
-        idCol.setCellValueFactory(new PropertyValueFactory<Transact,String>("id"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<Transact,Integer>("id"));
 
-        TableColumn birthDateCol = new TableColumn("BirthDate");
-        idCol.setCellValueFactory(new PropertyValueFactory<Transact,String>("birthDate"));
+        birthDateColumn.setCellValueFactory(new PropertyValueFactory<Transact,Integer>("birthDate"));
 
-        TableColumn ageCol = new TableColumn("Age");
-        idCol.setCellValueFactory(new PropertyValueFactory<Transact,String>("age"));
+        ageColumn.setCellValueFactory(new PropertyValueFactory<Transact,Integer>("age"));
 
-        TableColumn blockIdCol = new TableColumn("BlockId");
-        idCol.setCellValueFactory(new PropertyValueFactory<Transact,String>("blockId"));
-        table.getColumns().addAll(idCol, birthDateCol, ageCol,blockIdCol);
+        blockColumn.setCellValueFactory(new PropertyValueFactory<Transact,String>("block"));
     }
 
     public void setTime(int time){
@@ -150,8 +150,8 @@ public class MonitorView extends Application implements Initializable {
     }
 
     public void reloadTransacts(List<Transact> transacts) {
-        table.getItems().clear();
         ObservableList<Transact> observTransacts = FXCollections.observableList(transacts);
         table.setItems(observTransacts);
+        System.out.println("Transacts RELOADED, list:" + transacts);
     }
 }

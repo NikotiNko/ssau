@@ -11,6 +11,7 @@ import java.util.List;
  * Created by Shpulka on 21.11.2016.
  */
 public class Timer {
+    private static final int FIXED_RATE = 500;
     private MonitorView monitorView;
     private int time;
     private int lastId;
@@ -21,18 +22,22 @@ public class Timer {
         this.time = 0;
         this.lastId = 0;
         this.transacts = new ArrayList<>();
+        System.out.println("Timer CREATED");
     }
 
     public void tick() throws InterruptedException {
         time++;
+        System.out.println("Timer TICK, time:" + time);
         for (Transact t : transacts) {
-            t.incAge();
+            if (!t.getBlock().equals("Deleted") && !t.getBlock().equals("Free")) {
+                t.incAge();
+            }
         }
-        Platform.runLater(()->{
+        Platform.runLater(() -> {
             monitorView.setTime(time);
             monitorView.reloadTransacts(transacts);
         });
-        Thread.sleep(1000);
+        Thread.sleep(FIXED_RATE);
     }
 
     public int generateId() {
@@ -45,5 +50,6 @@ public class Timer {
 
     public void register(Transact transact) {
         transacts.add(transact);
+        System.out.println("Timer, Transact " + transact.getId() + " REGISTERED");
     }
 }

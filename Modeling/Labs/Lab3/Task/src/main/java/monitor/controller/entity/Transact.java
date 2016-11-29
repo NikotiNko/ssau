@@ -10,16 +10,17 @@ public class Transact {
     private int id;
     private int birthDate;
     private int age;
-    private int blockId;
+    private String block;
     private Map<String, Integer> params;
 
     public Transact(Timer timer) {
         id = timer.generateId();
         birthDate = timer.getTime();
         age = 0;
-        blockId = 0;
-        timer.register(this);
+        block = "Generator";
         params = new HashMap<>();
+        timer.register(this);
+        System.out.println("Transact " + id + " CREATED");
     }
 
     public int getId() {
@@ -46,19 +47,30 @@ public class Transact {
         age++;
     }
 
-    public int getBlockId() {
-        return blockId;
-    }
-
-    public void incBlockId() {
-        blockId++;
-    }
-
-    public void setBlockId(int blockId) {
-        this.blockId = blockId;
+    public void setBlock(String block) {
+        this.block = block;
     }
 
     public Map<String, Integer> getParams() {
         return params;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getBlock() {
+        return block;
+    }
+
+    @Override
+    public String toString() {
+        return "Transact{" +
+                "id=" + id +
+                ", birthDate=" + birthDate +
+                ", age=" + age +
+                ", block=" + block +
+                ", params=" + params +
+                '}';
     }
 }
