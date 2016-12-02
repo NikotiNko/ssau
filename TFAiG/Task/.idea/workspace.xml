@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3bca867-fd31-40a0-9c8b-954c718aeaf8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/entity/DataItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/entity/Result.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/entity/State.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/simple2.TXT" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DB/~$Д_лаб1.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../DB/~$Д_лаб2.docx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.DCX" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.dbc" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/Base1.dbc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE2.FRX" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/SIMPLE3.FRX" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.FRT" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.FRT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.frx" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/designer.frx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/stud.CDX" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3/stud.CDX" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3_access/Database1.accdb" afterPath="$PROJECT_DIR$/../../DB/6203/Nikitin/Lab3_access/Database1.accdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../OS/Labs/Lab4-8/Task6/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../OS/Labs/Lab4-8/Task6/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java" afterPath="$PROJECT_DIR$/src/main/java/monitor/service/Analyzer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java" afterPath="$PROJECT_DIR$/src/main/java/monitor/view/AnalyseView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main.fxml" afterPath="$PROJECT_DIR$/target/classes/main.fxml" />
-    </list>
+    <list default="true" id="b3bca867-fd31-40a0-9c8b-954c718aeaf8" name="Default" comment="" />
     <ignored path="WebParser.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -715,8 +691,8 @@
     <option name="totallyTimeSpent" value="15282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
