@@ -11,17 +11,18 @@ import java.util.List;
  * Created by Shpulka on 21.11.2016.
  */
 public class Timer {
-    private static final int FIXED_RATE = 500;
+    private int fixedDelay;
     private MonitorView monitorView;
     private int time;
     private int lastId;
     private List<Transact> transacts;
 
-    public Timer(MonitorView monitorView) {
+    public Timer(MonitorView monitorView, int fixedDelay) {
         this.monitorView = monitorView;
         this.time = 0;
         this.lastId = 0;
         this.transacts = new ArrayList<>();
+        this.fixedDelay = fixedDelay;
         System.out.println("Timer CREATED");
     }
 
@@ -37,7 +38,7 @@ public class Timer {
             monitorView.setTime(time);
             monitorView.reloadTransacts(transacts);
         });
-        Thread.sleep(FIXED_RATE);
+        Thread.sleep(fixedDelay);
     }
 
     public int generateId() {
@@ -51,5 +52,13 @@ public class Timer {
     public void register(Transact transact) {
         transacts.add(transact);
         System.out.println("Timer, Transact " + transact.getId() + " REGISTERED");
+    }
+    
+    public void setFixedDelay(int fixedDelay){
+        this.fixedDelay = fixedDelay;
+    }
+
+    public List<Transact> getTransacts() {
+        return transacts;
     }
 }
