@@ -41,11 +41,9 @@ public class AnalyseView extends Application implements Initializable {
     @FXML
     private Label output;
 
-    private Analyzer analyzer;
-
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setTitle("Monitor");
+        stage.setTitle("Analyzer");
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);

@@ -116,10 +116,10 @@ public class Analyzer {
                 case P:
                     if (current == ',') {
                         state = L1;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (current == ')') {
                         state = F;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (current == ' ') {
                         state = O6;
                     } else if (current == '.') {
@@ -172,8 +172,8 @@ public class Analyzer {
                     } else if (isIn('1', '9')) {
                         state = C0;
                         currentConstant += current;
-                    } else if (current == '-') {
-                        state = C0o;
+                    /*} else if (current == '-') {
+                        state = C0o;*/
                     } else if (isIn('a', 'z')) {
                         state = I2o;
                         currentIdentificator += current;
@@ -191,13 +191,6 @@ public class Analyzer {
                         state = Lo;
                         addConstant(Analyzer::isInteger);
                     } else if (isIn('0', '9')) {
-                        currentConstant += current;
-                    } else state = E;
-                    break;
-
-                case C0o:
-                    if (isIn('1', '9')) {
-                        state = C0;
                         currentConstant += current;
                     } else state = E;
                     break;
@@ -226,8 +219,8 @@ public class Analyzer {
                     if (isIn('a', 'z')) {
                         state = I2o;
                         currentIdentificator += current;
-                    } else if (current == '-') {
-                        state = C0o;
+                    /*} else if (current == '-') {
+                        state = C0o;*/
                     } else if (isIn('1', '9')) {
                         state = C0;
                         currentConstant += current;
@@ -280,14 +273,14 @@ public class Analyzer {
                 case P1:
                     if (current == ')') {
                         state = F;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (current == 'E') {
                         state = Z;
                         currentConstant += current;
                     } else if (current == ' ') {
                         state = O6;
                     } else if (current == ',') {
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                         state = L1;
                     } else if (current == '.') {
                         state = N;
@@ -323,10 +316,10 @@ public class Analyzer {
                         state = O6;
                     } else if (current == ')') {
                         state = F;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (current == ',') {
                         state = L1;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (isIn('0', '9')) {
                         currentConstant += current;
                     } else state = E;
@@ -337,7 +330,7 @@ public class Analyzer {
                         state = L1;
                     } else if (current == ')') {
                         state = F;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (current != ' ') {
                         state = E;
                     }
@@ -351,7 +344,7 @@ public class Analyzer {
                         state = O6;
                     } else if (current == ',') {
                         state = L1;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (current == '-') {
                         state = Z2;
                         currentConstant += current;
@@ -368,12 +361,12 @@ public class Analyzer {
                 case Z1:
                     if (current == ')') {
                         state = F;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (current == ' ') {
                         state = O6;
                     } else if (current == ',') {
                         state = L1;
-                        addConstant(Analyzer::isDouble);
+                        addConstant(Analyzer::isAnyConstant);
                     } else if (isIn('0', '9')) {
                         currentConstant += current;
                     } else state = E;
@@ -436,12 +429,17 @@ public class Analyzer {
     private void addIdentificator() {
         if (!currentIdentificator.isEmpty()) {
             if (isIdentificator(currentIdentificator)) {
-                identificators.add(new DataItem(currentId++, currentIdentificator));
-                currentIdentificator = "";
+                if (!identificators.stream().anyMatch(dataItem -> dataItem.getData().equals(currentIdentificator))) {
+                    identificators.add(new DataItem(currentId++, currentIdentificator));
+                    currentIdentificator = "";
+                } else {
+                    state = E;
+                    message = "Повторяющийся идентификатор: " + currentIdentificator;
+                }
+
             } else {
                 state = E;
                 message = "Некорректный идентификатор: " + currentIdentificator;
-                i--;
             }
         }
     }
@@ -481,7 +479,8 @@ public class Analyzer {
         }
     }
 
-    public static boolean isDouble(String string) {
+    public static boolean isAnyConstant(String string) {
+
         if (string.contains(".") || string.contains("E") || string.contains("e")) {
             int index = string.indexOf('E') != -1 ? string.indexOf('E') : string.indexOf('e');
             if (index != -1) {
@@ -504,8 +503,14 @@ public class Analyzer {
                     return false;
                 }
             }
-        } else return isInteger(string);
-
+        } else {
+            try {
+                int val = Integer.parseInt(string);
+                return val >= -32768 && val <= 32767;
+            }catch (NumberFormatException n){
+                return false;
+            }
+        }
     }
 
     public static boolean isIdentificator(String string) {
