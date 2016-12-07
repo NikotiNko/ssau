@@ -4,6 +4,9 @@ import monitor.service.generator.RandomGenerator;
 
 import java.util.Random;
 
+/**
+ * Равномерная случайная величина
+ */
 public class RandomAdapter implements RandomGenerator {
 
     private Random rand;

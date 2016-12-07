@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Shpulka on 21.11.2016.
+ * Таймер моделирования.
  */
 public class Timer {
     private int fixedDelay;
@@ -25,7 +25,11 @@ public class Timer {
         this.fixedDelay = fixedDelay;
         System.out.println("Timer CREATED");
     }
-
+    /**
+     * Произвести вычислений на 1 тик моделируемого времени.
+     * Увеличивает время пребывания каждого транзакта в модели.
+     * Отрисовывает часы и таблицу транзактов.
+     */
     public void tick() throws InterruptedException {
         time++;
         System.out.println("Timer TICK, time:" + time);
@@ -41,6 +45,9 @@ public class Timer {
         Thread.sleep(fixedDelay);
     }
 
+    /**
+     * Генератор номера транзакта.
+     */
     public int generateId() {
         return lastId++;
     }
@@ -49,11 +56,18 @@ public class Timer {
         return time;
     }
 
+    /**
+     * Регистрация созданного транзакта
+     */
     public void register(Transact transact) {
         transacts.add(transact);
         System.out.println("Timer, Transact " + transact.getId() + " REGISTERED");
     }
-    
+
+    /**
+     * Установка задержки системного времени.
+     * @param fixedDelay значение в миллисекундах
+     */
     public void setFixedDelay(int fixedDelay){
         this.fixedDelay = fixedDelay;
     }

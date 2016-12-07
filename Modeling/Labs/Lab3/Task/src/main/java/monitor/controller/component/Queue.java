@@ -3,13 +3,12 @@ package monitor.controller.component;
 import javafx.application.Platform;
 import javafx.scene.control.ProgressIndicator;
 import monitor.controller.entity.Transact;
-import monitor.view.MonitorView;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
- * Created by Shpulka on 21.11.2016.
+ * Очередь устройства.
  */
 public class Queue {
 
@@ -19,18 +18,35 @@ public class Queue {
     private Device device;
     private ProgressIndicator loader;
 
+    /**
+     * Счетчики удаленных транзактов
+     */
+    private int deletedByTime;
+    private int deletedBySize;
+
     public Queue(int queueLen, int queueMaxTime, Device device, ProgressIndicator loader) {
         this.queueLen = queueLen;
         this.queueMaxTime = queueMaxTime;
         this.device = device;
         this.loader = loader;
+        deletedByTime = 0;
+        deletedBySize = 0;
         System.out.println("Queue CREATED");
     }
 
+    /**
+     * Проверка очереди на пустоту
+     */
     public boolean isEmpty() {
         return queue.isEmpty();
     }
 
+    /**
+     * Произвести вычислений на 1 тик моделируемого времени.
+     * Увеличивает время пребывания транзактов в очереди.
+     * Если время пребывания достигло максимума - удаляет транзакт из модели.
+     * Если устройство свободно - отправлят транзакт в устройство.
+     */
     public void tick() {
         System.out.println("Queue TICK, queue size:" + queue.size());
         Iterator<Transact> iterator = queue.iterator();
@@ -41,6 +57,7 @@ public class Queue {
                 iterator.remove();
                 t.setBlock("Deleted");
                 refresh();
+                deletedByTime++;
                 System.out.println("Transact" + t.getId() + " DELETED FROM QUEUE, out of time!");
             } else {
                 time++;
@@ -56,6 +73,10 @@ public class Queue {
         }
     }
 
+    /**
+     * Добавить транзакт в очередь. Если очередь заполненна, транзакт удаляется из модели.
+     * @param transact
+     */
     public void add(Transact transact) {
         System.out.println("Transact" + transact.getId() + " OFFER TO QUEUE");
         if (queue.size() < queueLen) {
@@ -65,11 +86,23 @@ public class Queue {
             System.out.println("Transact" + transact.getId() + " ADDED TO QUEUE");
         } else {
             transact.setBlock("Deleted");
+            deletedBySize++;
             System.out.println("Transact DELETED FROM QUEUE, queue overload!");
         }
     }
 
-    private void refresh(){
-        Platform.runLater(() -> loader.setProgress((double)queue.size()/queueLen));
+    /**
+     * Отрисовка загрузки.
+     */
+    private void refresh() {
+        Platform.runLater(() -> loader.setProgress((double) queue.size() / queueLen));
+    }
+
+    public int getDeletedByTime() {
+        return deletedByTime;
+    }
+
+    public int getDeletedBySize() {
+        return deletedBySize;
     }
 }

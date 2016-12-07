@@ -4,7 +4,9 @@ import monitor.service.generator.RandomGenerator;
 
 import java.util.Random;
 
-
+/**
+ * Усеченная нормальная случайная величина (>0)
+ */
 public class Gaussian implements RandomGenerator {
 
     private Random rand;

@@ -16,22 +16,24 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import monitor.controller.MonitorController;
-import monitor.controller.component.Timer;
 import monitor.controller.entity.Result;
 import monitor.controller.entity.Transact;
 import monitor.service.generator.RandomGenerator;
 import monitor.service.generator.impl.Gaussian;
 import monitor.service.generator.impl.RandomAdapter;
 
-
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.StringJoiner;
 
-
+/**
+ * Класс отрисовки данных моделирования.
+ */
 public class MonitorView extends Application implements Initializable {
 
+    /**
+     * Все объекты экрана.
+     */
 
     @FXML
     private ProgressIndicator generatorLoader;
@@ -93,6 +95,9 @@ public class MonitorView extends Application implements Initializable {
     @FXML
     private Pane device;
 
+    /**
+     * Старт приложения.
+     */
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Monitor");
@@ -102,6 +107,10 @@ public class MonitorView extends Application implements Initializable {
         stage.show();
     }
 
+    /**
+     * Запуск моделирования.
+     * Создание контроллера моделирования и передача ему требуемых параметров.
+     */
     @FXML
     private void startstop(ActionEvent event) throws Exception {
         result.setText("");
@@ -141,6 +150,10 @@ public class MonitorView extends Application implements Initializable {
         process.start();
     }
 
+    /**
+     * Инициализация графического интерфейса.
+     * Устанавливаются возможные случайные величины для генерации времени.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ObservableList<String> randoms = FXCollections.observableArrayList();
@@ -164,10 +177,17 @@ public class MonitorView extends Application implements Initializable {
         this.result.setWrapText(true);
     }
 
+    /**
+     * Отрисовка времени
+     */
     public void setTime(int time) {
         this.time.setText(String.valueOf(time));
     }
 
+    /**
+     * Переотрисовка таблицы.
+     * @param transacts
+     */
     public void reloadTransacts(List<Transact> transacts) {
         ObservableList<Transact> observTransacts = FXCollections.observableList(transacts);
         table.setItems(observTransacts);
@@ -175,11 +195,19 @@ public class MonitorView extends Application implements Initializable {
         System.out.println("Transacts RELOADED, list:" + transacts);
     }
 
+    /**
+     * Отрисовка результата.
+     * @param result
+     */
     public void viewResult(Result result) {
         startStopBtn.setSelected(false);
         this.result.setText(result.toString());
     }
 
+    /**
+     * Изменение задержки системного времени.
+     * @param event
+     */
     public void changeSpeed(Event event) {
         if (monitorController!=null) {
             monitorController.setFixedDelay(getDelay());

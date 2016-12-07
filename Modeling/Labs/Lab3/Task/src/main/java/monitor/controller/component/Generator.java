@@ -4,10 +4,9 @@ import javafx.application.Platform;
 import javafx.scene.control.ProgressIndicator;
 import monitor.controller.entity.Transact;
 import monitor.service.generator.RandomGenerator;
-import monitor.view.MonitorView;
 
 /**
- * Created by Shpulka on 21.11.2016.
+ * Генератор транзактов.
  */
 public class Generator {
 
@@ -34,10 +33,18 @@ public class Generator {
         System.out.println("Generator CREATED");
     }
 
+    /**
+     * Будут ли генерироваться еще транзакты.
+     * @return
+     */
     public boolean hasNext() {
         return currentCount <= count;
     }
 
+    /**
+     * Произвести вычислений на 1 тик моделируемого времени.
+     * Уменьшает оставшееся время последнего транзакта. Если время вышло - транзакт переходит в очередь.
+     */
     public void tick() {
         lastTime--;
         System.out.println("Generator TICK, last time:" + lastTime);

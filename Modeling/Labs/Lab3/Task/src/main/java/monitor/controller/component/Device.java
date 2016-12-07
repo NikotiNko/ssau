@@ -4,10 +4,11 @@ import javafx.application.Platform;
 import javafx.scene.control.ProgressIndicator;
 import monitor.controller.entity.Transact;
 import monitor.service.generator.RandomGenerator;
-import monitor.view.MonitorView;
+
 
 /**
- * Created by Shpulka on 21.11.2016.
+ * Класс устройства. Обрабатывает отправленные к нему транзакты.
+ * Транзакты получаются из очереди путем вызова метода #advance(Transact) из очереди
  */
 public class Device {
 
@@ -25,11 +26,18 @@ public class Device {
         System.out.println("Device CREATED");
     }
 
+    /**
+     * Проверка устройства на занятость
+     */
     public boolean isBusy() {
         return lastTime > 0;
     }
 
 
+    /**
+     * Произвести вычислений на 1 тик моделируемого времени.
+     * Уменьшает оставшееся время последнего транзакта. Если время вышло - транзакт освобождается из модели.
+     */
     public void tick() {
         lastTime--;
         if (lastTime >= 0) {
@@ -43,6 +51,10 @@ public class Device {
         }
     }
 
+    /**
+     * Транзакт занимает устройство.
+     * @param transact обрабатываемый транзакт.
+     */
     public void advance(Transact transact) {
         System.out.println("Device ADVANCED");
         currentTransact = transact;

@@ -1,7 +1,9 @@
 package monitor.controller.entity;
 
+
 /**
- * Created by Артем on 03.12.2016.
+ * Класс результата моделирования.
+ * Конструктор результата.
  */
 public class Result {
 
