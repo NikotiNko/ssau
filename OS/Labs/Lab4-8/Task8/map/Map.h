@@ -13,8 +13,6 @@ public:
 
     void putSync(int key, int val);
 
-    DWORD putAsync();
-
     void remove(int key);
 
     int getSize();
@@ -32,5 +30,5 @@ private:
     int* size;
     Node* buffer;
     HANDLE hMutex;
-    HANDLE currentThread;
+    HANDLE currentProcess;
 };

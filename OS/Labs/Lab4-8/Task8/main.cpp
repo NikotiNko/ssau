@@ -15,11 +15,10 @@ int main() {
     map->put(-122,-875);
     map->put(54,9212);
 
-    cout << "Before Size:" <<map->getSize()<<endl;
     Sleep(1000);
-    Map* importedMap = Map::input("savedMap.txt");
-    cout << "Size:" <<map->getSize()<<endl;
-    cout << "Get:" <<*(map->get(10))<<endl;
+    Map* importedMap = Map::input("bufferMap");
+    cout << "Size:" <<importedMap->getSize()<<endl;
+    cout << "Get:" <<*(importedMap->get(-122))<<endl;
     delete importedMap;
     return 0;
 }

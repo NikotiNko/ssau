@@ -9,7 +9,6 @@
 #include "Map.h"
 
 
-
 void writeNode(HANDLE hFile, Node *node) {
     if (node != nullptr) {
         WriteFile(hFile, node->getKey(), sizeof(int), NULL, NULL);
@@ -17,22 +16,6 @@ void writeNode(HANDLE hFile, Node *node) {
         writeNode(hFile, node->getLeftNode());
         writeNode(hFile, node->getRightNode());
     }
-}
-
-static DWORD WINAPI putAsyncStart(CONST LPVOID lpParam)
-{
-    Map* instance = (Map*) lpParam;
-    return instance->putAsync();
-}
-
-DWORD WINAPI Map::putAsync(){
-    WaitForSingleObject(hMutex, INFINITE);
-    int key = *(buffer->getKey());
-    int value = *(buffer->getValue());
-    putSync(key, value);
-    Map::output("savedMap.txt",this);
-    ReleaseMutex(hMutex);
-    ExitThread(0);
 }
 
 //public
@@ -47,23 +30,32 @@ int *Map::get(int key) {
 }
 
 void Map::put(int key, int val) {
-    if (currentThread != NULL && currentThread != nullptr) {
-        WaitForSingleObject(currentThread,INFINITE);
+    if (currentProcess != NULL && currentProcess != nullptr) {
+        WaitForSingleObject(currentProcess, INFINITE);
     }
     WaitForSingleObject(hMutex, INFINITE);
-    buffer = new Node(key, val);
+    HANDLE hFile = CreateFile("buffer", GENERIC_WRITE, FILE_SHARE_WRITE, NULL,
+                              CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+    WriteFile(hFile, &key, sizeof(int), NULL, NULL);
+    WriteFile(hFile, &val, sizeof(int), NULL, NULL);
+    CloseHandle(hFile);
     ReleaseMutex(hMutex);
 
-    currentThread = CreateThread(NULL, 0, &putAsyncStart, this, 0, NULL);
-    if(NULL == currentThread) {
-        std::cout << "Error while try to create new thread" << std::endl;
+    STARTUPINFO cif;
+    ZeroMemory(&cif, sizeof(STARTUPINFO));
+    PROCESS_INFORMATION pi;
+    if (CreateProcess("Modifyer.exe", NULL,
+                      NULL, NULL, TRUE, NULL, NULL, NULL, &cif, &pi) == TRUE) {
+        currentProcess = pi.hProcess;
+    } else {
+        std::cout << "Error while try to create process" << std::endl;
     }
+
 }
 
 void Map::putSync(int key, int val) {
-    Node *insertedNode = new Node(key,val);
-
-    if (rootNode != NULL && rootNode!= nullptr) {
+    Node *insertedNode = new Node(key, val);
+    if (rootNode != NULL && rootNode != nullptr) {
         rootNode->insertNode(insertedNode);
     } else {
         rootNode = insertedNode;
@@ -83,7 +75,7 @@ Map::Map() {
     hMutex = CreateMutex(NULL, FALSE, NULL);
     size = new int(0);
     rootNode = nullptr;
-    if(NULL == hMutex) {
+    if (NULL == hMutex) {
         std::cout << "Error while try to create mutex" << std::endl;
     }
 }
@@ -91,8 +83,10 @@ Map::Map() {
 Map::~Map() {
     std::cout << "Map destructor, size=" << *size << std::endl;
     delete size;
-    rootNode->~Node();
+    if (rootNode != nullptr)
+        rootNode->~Node();
     CloseHandle(hMutex);
+    DeleteFile("bufferMap");
 }
 
 int Map::getSize() {
@@ -112,13 +106,16 @@ void Map::output(char *filename, Map *source) {
 Map *Map::input(char *filename) {
     Map *map = new Map();
     HANDLE hFile = CreateFileA(filename, GENERIC_READ, 0, NULL, OPEN_EXISTING, NULL, NULL);
-    int len, k, v;
-    ReadFile(hFile, &len, sizeof(int), NULL, NULL);
-    for (int i = 0; i < len; i++) {
-        ReadFile(hFile, &k, sizeof(int), NULL, NULL);
-        ReadFile(hFile, &v, sizeof(int), NULL, NULL);
-        map->putSync(k, v);
+    if (hFile != INVALID_HANDLE_VALUE) {
+        int len, k, v;
+        ReadFile(hFile, &len, sizeof(int), NULL, NULL);
+        for (int i = 0; i < len; i++) {
+            ReadFile(hFile, &k, sizeof(int), NULL, NULL);
+            ReadFile(hFile, &v, sizeof(int), NULL, NULL);
+            map->putSync(k, v);
+        }
+        CloseHandle(hFile);
+
     }
-    CloseHandle(hFile);
     return map;
 }
