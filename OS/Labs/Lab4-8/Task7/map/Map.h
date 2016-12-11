@@ -1,6 +1,8 @@
 #pragma once
 
 #include "tree/Node.h"
+#include <w32api/handleapi.h>
+#include <w32api/synchapi.h>
 
 class Map {
 
@@ -24,4 +26,8 @@ public:
 private:
     Node* rootNode;
     int* size;
+    Node* buffer;
+    HANDLE hMutex;
+
+    DWORD putAsync(CONST LPVOID lpParam);
 };

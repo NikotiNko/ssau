@@ -179,6 +179,7 @@ public class Analyzer {
                         currentIdentificator += current;
                     } else if (current == '0') {
                         state = O8;
+                        currentConstant += current;
                     } else {
                         state = E;
                     }
@@ -399,7 +400,7 @@ public class Analyzer {
             if (message != null) {
                 result.setMessage(message);
             } else result.setMessage("Синтаксическая ошибка!");
-            result.setPosition(i - 1);
+            result.setPosition(i-1);
         } else {
             switch (state) {
                 case E:
