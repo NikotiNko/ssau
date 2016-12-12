@@ -521,6 +521,4 @@ public class Analyzer {
                 && !string.equalsIgnoreCase("FOR")
                 && !string.equalsIgnoreCase("TO");
     }
-
-
 }

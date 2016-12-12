@@ -80,5 +80,4 @@ public class AnalyseView extends Application implements Initializable {
         id1.setCellValueFactory(new PropertyValueFactory<DataItem, Integer>("id"));
         id2.setCellValueFactory(new PropertyValueFactory<DataItem, Integer>("id"));
     }
-
 }
